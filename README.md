@@ -1,5 +1,11 @@
 ## Data Streaming with WSL, Kafka, and Quixstreams
 
+<br>
+**READ BEFORE PROCEEDING**: The initial approach was attempted, but it ultimately failed due to network porting issues. Many of the steps in that process may no longer be relevant if using SSH tunneling with properly configured private and public keys, or by employing a different authentication method to connect to the server.
+
+For a more streamlined approach, please refer to the **README_SIMPLE.md** file, which outlines a simplified and more effective method.
+<br><br>
+
 ## Overview
 
 This project demonstrates a data streaming process using Windows Subsystem for Linux (WSL), Kafka, and Quixstreams. We utilize Faker to generate fake custom data for this example.
@@ -52,7 +58,7 @@ This project demonstrates a data streaming process using Windows Subsystem for L
 
    - To start ZooKeeper: ./bin/zookeeper-server-start.sh config/zookeeper.properties
    - To start the Kafka Broker: ./bin/kafka-server-start.sh config/server.properties
-   - To create a new topic: ./bin/kafka-topics.sh --bootstrap-server localhost:9092 --create --topic demo_test --replication-factor 1 --partitions 1
+   - To create a new topic: ./bin/kafka-topics.sh --bootstrap-server localhost:9092 --create --topic test --replication-factor 1 --partitions 1
 
 8. Setting up the Python Environment
 
